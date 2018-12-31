@@ -15,10 +15,6 @@ def compress_dir(d, files):
 		os.remove(full_path)
 	zipf.close()
 
-
-
-import os
-from os.path import join, getsize
 for root, dirs, files in os.walk(the_dir):
 	if len(files) > 2:
 		compress_dir(root, files)
