@@ -16,7 +16,7 @@ def compress_dir(d, files):
 	zipf.close()
 
 for root, dirs, files in os.walk(the_dir):
-	if len(files) > 2:
+	if len(files) > file_threshold:
 		compress_dir(root, files)
 
 
