@@ -5,12 +5,9 @@ import zipfile
 the_dir = sys.argv[1]
 file_threshold = sys.argv[2]
 
-def number_of_files(d):
-	return sum([len(files) for r, d, files in os.walk(d)])
-
 def compress_dir(d, files):
 	dir_name = os.path.basename(os.path.normpath(d))
-	print("compressin", dir_name)
+	print("compressing", dir_name)
 	zipf = zipfile.ZipFile(d + '/content.zip', 'w', zipfile.ZIP_DEFLATED)
 	for f in files:
 		full_path = os.path.join(d, f)
