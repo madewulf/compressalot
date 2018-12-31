@@ -1,0 +1,1 @@
+python compressalot.py test 2
